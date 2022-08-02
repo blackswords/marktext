@@ -32,6 +32,8 @@ class ClickEvent {
         return
       }
 
+      console.log(event)
+
       const startBlock = contentState.getBlock(start.key)
       const nextTextBlock = contentState.findNextBlockInLocation(startBlock)
       if (
@@ -152,6 +154,8 @@ class ClickEvent {
       // Handle image click, to select the current image
       if (target.tagName === 'IMG' && imageWrapper) {
         // Handle select image
+        console.log(target.getAttribute('src'))
+        console.log(imageWrapper)
         const imageInfo = getImageInfo(imageWrapper)
         event.preventDefault()
         eventCenter.dispatch('select-image', imageInfo)

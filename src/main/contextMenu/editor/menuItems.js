@@ -1,5 +1,12 @@
 // NOTE: This are mutable fields that may change at runtime.
-
+export const UPLOAD_PICTURE = {
+  label: 'Upload Picture',
+  id: 'uploadMenuItem'/* ,
+  click (params) {
+    // targetWidow.webContents.send('mt:cm-upload-picture')
+    console.log(params)
+  } */
+}
 export const CUT = {
   label: 'Cut',
   id: 'cutMenuItem',
